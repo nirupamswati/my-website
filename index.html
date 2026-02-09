@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safer Internet Day 2026 - Smart Tech, Safe Choices</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.5; }
+        }
+
+        .logo-container {
+            background: white;
+            padding: 20px 40px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .logo-container img {
+            max-width: 350px;
+            height: auto;
+            display: block;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .header .theme {
+            font-size: 2em;
+            color: #FFE66D;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .header .date {
+            font-size: 1.3em;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+            background: rgba(255,255,255,0.2);
+            padding: 10px 25px;
+            border-radius: 25px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* Authentication Section */
+        .auth-section {
+            padding: 25px 40px;
+            background: #f8f9fa;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .auth-container {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .auth-container input {
+            flex: 1;
+            padding: 14px 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1.1em;
+            transition: border-color 0.3s;
+        }
+
+        .auth-container input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .auth-container button {
+            padding: 14px 30px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .auth-container button:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .user-info {
+            text-align: center;
+            color: #333;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .logout-btn {
+            margin-left: 15px;
+            padding: 10px 20px;
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .logout-btn:hover {
+            background: #c82333;
+            transform: translateY(-2px);
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            background: #f8f9fa;
+            border-bottom: 3px solid #e9ecef;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 25px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 700;
+            color: #666;
+            border: none;
+            background: none;
+            transition: all 0.3s;
+            font-size: 1.2em;
+            position: relative;
+        }
+
+        .tab:hover {
+            background: #e9ecef;
+            color: #667eea;
+        }
+
+        .tab.active {
+            background: white;
+            color: #667eea;
+            border-bottom: 4px solid #667eea;
+        }
+
+        .tab-icon {
+            font-size: 1.5em;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        /* Content Area */
+        .content {
+            padding: 50px;
+            min-height: 600px;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Home Page Styles */
+        .welcome-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .welcome-section h2 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .welcome-section p {
+            font-size: 1.3em;
+            color: #666;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto 30px;
+        }
+
+        .poster-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 35px;
+            margin-top: 40px;
+        }
+
+        .poster-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .poster-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .poster-card h3 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .poster-card ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .poster-card li {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            font-size: 1.1em;
+            line-height: 1.5;
+        }
+
+        .poster-card li:last-child {
+            border-bottom: none;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 40px;
+            box-shadow: 0 10px 30px rgba(78, 205, 196, 0.3);
+        }
+
+        .info-box h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .info-box p {
+            font-size: 1.15em;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        /* Quiz Styles */
+        .quiz-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .quiz-header h2 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .quiz-header p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .quiz-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .question-card {
+            background: #f8f9fa;
+            padding: 35px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            border-left: 6px solid #667eea;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .question-card:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .question-card h3 {
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 1.4em;
+            line-height: 1.6;
+        }
+
+        .question-number {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .option {
+            padding: 18px 20px;
+            background: white;
+            border: 3px solid #ddd;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.05em;
+            line-height: 1.5;
+        }
+
+        .option:hover {
+            border-color: #667eea;
+            background: #f0f4ff;
+            transform: translateX(5px);
+        }
+
+        .option.selected {
+            border-color: #667eea;
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+
+        .submit-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 18px 50px;
+            border-radius: 12px;
+            font-size: 1.2em;
+            font-weight: 700;
+            cursor: pointer;
+            display: block;
+            margin: 40px auto 0;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .submit-btn:hover {
+            background: #5568d3;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .submit-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .quiz-result {
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(135deg, #f0f4ff 0%, #e6f0ff 100%);
+            border-radius: 20px;
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .quiz-result h2 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 25px;
+        }
+
+        .score {
+            font-size: 4em;
+            font-weight: 700;
+            color: #764ba2;
+            margin: 25px 0;
+        }
+
+        .leaderboard {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .leaderboard h3 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .leaderboard-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            background: #f8f9fa;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            align-items: center;
+        }
+
+        .rank {
+            font-weight: 700;
+            color: #764ba2;
+            font-size: 1.2em;
+            min-width: 50px;
+        }
+
+        /* Drawing Competition Styles */
+        .competition-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .competition-header h2 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .competition-header p {
+            font-size: 1.2em;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .upload-section {
+            max-width: 700px;
+            margin: 0 auto 50px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .upload-section h3 {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .drawing-title-input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 3px solid #ddd;
+            border-radius: 12px;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            transition: border-color 0.3s;
+        }
+
+        .drawing-title-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .upload-area {
+            border: 4px dashed #667eea;
+            border-radius: 15px;
+            padding: 50px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: white;
+        }
+
+        .upload-area:hover {
+            background: #f0f4ff;
+            border-color: #764ba2;
+            transform: scale(1.02);
+        }
+
+        .upload-area input[type="file"] {
+            display: none;
+        }
+
+        .upload-icon {
+            font-size: 4em;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .gallery-item-info {
+            padding: 20px;
+        }
+
+        .gallery-item-info h4 {
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 1.3em;
+        }
+
+        .gallery-item-info p {
+            color: #666;
+            font-size: 1em;
+            margin-bottom: 5px;
+        }
+
+        .gallery-item-info .date {
+            font-size: 0.9em;
+            color: #999;
+        }
+
+        /* Discussion Forum Styles */
+        .forum-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .forum-header h2 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .forum-header p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .question-prompts {
+            background: linear-gradient(135deg, #FFE66D 0%, #FFC93C 100%);
+            padding: 35px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(255, 230, 109, 0.3);
+        }
+
+        .question-prompts h3 {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .question-prompts p {
+            color: #555;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+
+        .prompt-buttons {
+            display: grid;
+            gap: 12px;
+        }
+
+        .prompt-btn {
+            background: white;
+            border: 3px solid #667eea;
+            padding: 18px 25px;
+            border-radius: 12px;
+            cursor: pointer;
+            text-align: left;
+            font-size: 1.1em;
+            transition: all 0.3s;
+            color: #333;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .prompt-btn:hover {
+            background: #f0f4ff;
+            transform: translateX(8px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+        }
+
+        .prompt-icon {
+            font-size: 1.5em;
+        }
+
+        .conversation-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .topic-input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 3px solid #ddd;
+            border-radius: 12px;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            transition: border-color 0.3s;
+        }
+
+        .topic-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .message-input {
+            width: 100%;
+            padding: 20px;
+            border: 3px solid #ddd;
+            border-radius: 12px;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            min-height: 120px;
+            resize: vertical;
+            transition: border-color 0.3s;
+            font-family: inherit;
+        }
+
+        .message-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .messages {
+            margin-top: 40px;
+        }
+
+        .message {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border-left: 5px solid #667eea;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .message:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transform: translateX(5px);
+        }
+
+        .message-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+
+        .message-author {
+            font-weight: 700;
+            color: #667eea;
+            font-size: 1.2em;
+        }
+
+        .message-date {
+            color: #999;
+            font-size: 0.95em;
+        }
+
+        .message-topic {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 12px;
+        }
+
+        .message-content {
+            color: #666;
+            line-height: 1.7;
+            font-size: 1.05em;
+        }
+
+        /* Utility Classes */
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            font-size: 1.2em;
+        }
+
+        .error {
+            background: #ffe6e6;
+            color: #d32f2f;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border-left: 5px solid #d32f2f;
+        }
+
+        .success {
+            background: #e6ffe6;
+            color: #2f7d32;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border-left: 5px solid #2f7d32;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .header .theme {
+                font-size: 1.3em;
+            }
+
+            .tabs {
+                flex-direction: column;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .poster-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo-container">
+                <img src="https://saferinternet.org.uk/wp-content/themes/safer-internet/public/logo.svg" alt="UK Safer Internet Centre">
+            </div>
+            <h1>🌐 Safer Internet Day 2026</h1>
+            <div class="theme">Smart Tech, Safe Choices</div>
+            <div class="date">📅 Monday, 10 February 2026</div>
+        </div>
+
+        <!-- Authentication Section -->
+        <div class="auth-section">
+            <div class="auth-container" id="authContainer">
+                <input type="text" id="usernameInput" placeholder="Enter your name to get started" />
+                <button onclick="login()">Join Now</button>
+            </div>
+            <div class="user-info" id="userInfo" style="display: none;">
+                👋 Welcome, <span id="currentUser"></span>!
+                <button class="logout-btn" onclick="logout()">Logout</button>
+            </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('home')">
+                <span class="tab-icon">🏠</span>
+                Home
+            </button>
+            <button class="tab" onclick="switchTab('quiz')">
+                <span class="tab-icon">📝</span>
+                Safety Quiz
+            </button>
+            <button class="tab" onclick="switchTab('drawing')">
+                <span class="tab-icon">🎨</span>
+                Drawing Competition
+            </button>
+            <button class="tab" onclick="switchTab('forum')">
+                <span class="tab-icon">💬</span>
+                Discussion Forum
+            </button>
+        </div>
+
+        <!-- Content Area -->
+        <div class="content">
+            <!-- HOME TAB -->
+            <div id="home" class="tab-content active">
+                <div class="welcome-section">
+                    <h2>Welcome to Safer Internet Day 2026!</h2>
+                    <p>
+                        Safer Internet Day is a time to celebrate the safe and responsible use of technology 
+                        through channels that are accessible and promote positive spaces for children and young people. 
+                        This year's theme is about <strong>making smart choices with AI</strong>.
+                    </p>
+                </div>
+
+                <div class="poster-grid">
+                    <div class="poster-card">
+                        <h3><span>🤖</span> Smart AI Choices</h3>
+                        <ul>
+                            <li>✓ Always verify AI-generated information with trusted sources</li>
+                            <li>✓ Keep personal information private - don't share with AI tools</li>
+                            <li>✓ Understand that AI can make mistakes and has limitations</li>
+                            <li>✓ Learn to recognize AI-generated misinformation</li>
+                            <li>✓ Be transparent about using AI assistance in your work</li>
+                            <li>✓ Use AI to enhance your learning, not replace it</li>
+                        </ul>
+                    </div>
+
+                    <div class="poster-card">
+                        <h3><span>🔒</span> Online Safety Essentials</h3>
+                        <ul>
+                            <li>✓ Create strong, unique passwords for each account</li>
+                            <li>✓ Think carefully before sharing anything online</li>
+                            <li>✓ Respect others' privacy and digital rights</li>
+                            <li>✓ Report cyberbullying and harmful content immediately</li>
+                            <li>✓ Ask for permission before posting photos of others</li>
+                            <li>✓ Talk to trusted adults about your online experiences</li>
+                        </ul>
+                    </div>
+
+                    <div class="poster-card">
+                        <h3><span>⚖️</span> Digital Ethics & Responsibility</h3>
+                        <ul>
+                            <li>✓ Give credit for others' work - avoid plagiarism</li>
+                            <li>✓ Be kind and respectful in all online interactions</li>
+                            <li>✓ Stand up against misinformation - check your sources</li>
+                            <li>✓ Think about the impact of what you post</li>
+                            <li>✓ Support friends who face online challenges</li>
+                            <li>✓ Be an active participant in making the internet safer</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <h3>💡 Why This Matters</h3>
+                    <p>
+                        <strong>Safer Internet Day is an opportunity to reflect on the growing use of artificial intelligence (AI).</strong> 
+                        It's crucial that children are safe when they use it. They must be protected from harmful content, and given 
+                        the tools and skills to recognise misinformation generated by AI.
+                    </p>
+                    <p>
+                        Children and young people should be involved in discussions and developments around AI, to learn how to use 
+                        it safely, so they are active participants in what is likely to become an increasing presence in their lives.
+                    </p>
+                </div>
+            </div>
+
+            <!-- QUIZ TAB -->
+            <div id="quiz" class="tab-content">
+                <div class="quiz-header">
+                    <h2>Digital Safety & AI Knowledge Quiz</h2>
+                    <p>Test your knowledge about using AI safely and responsibly!</p>
+                </div>
+
+                <div class="quiz-container" id="quizContainer">
+                    <div id="quizQuestions"></div>
+                    <button class="submit-btn" onclick="submitQuiz()" id="submitQuizBtn">Submit Quiz</button>
+                </div>
+
+                <div id="quizResults" style="display: none;"></div>
+            </div>
+
+            <!-- DRAWING COMPETITION TAB -->
+            <div id="drawing" class="tab-content">
+                <div class="competition-header">
+                    <h2>🎨 Digital Safety Drawing Competition</h2>
+                    <p>
+                        Create and share your own illustrations about staying safe online! 
+                        Draw a poster showing how to use AI safely, how to stay protected on the internet, 
+                        or how to be a responsible digital citizen.
+                    </p>
+                </div>
+
+                <div class="upload-section">
+                    <h3>📤 Upload Your Drawing</h3>
+                    <input 
+                        type="text" 
+                        class="drawing-title-input" 
+                        id="drawingTitle" 
+                        placeholder="Give your drawing a title (e.g., 'Smart Choices with AI')"
+                    />
+                    <div class="upload-area" onclick="document.getElementById('drawingFile').click()">
+                        <input 
+                            type="file" 
+                            id="drawingFile" 
+                            accept="image/*" 
+                            onchange="handleDrawingUpload(event)"
+                        />
+                        <span class="upload-icon">🎨</span>
+                        <p style="font-size: 1.3em; color: #667eea; margin-bottom: 10px; font-weight: 600;">
+                            Click to Upload Your Drawing
+                        </p>
+                        <p style="color: #666; font-size: 1.05em;">
+                            Choose an image of your drawing (JPG, PNG, or GIF)
+                        </p>
+                    </div>
+                </div>
+
+                <div id="drawingMessage"></div>
+
+                <h3 style="color: #667eea; font-size: 2em; margin-bottom: 30px; text-align: center;">
+                    🖼️ Student Drawing Gallery
+                </h3>
+                <div class="gallery" id="drawingGallery">
+                    <div class="loading">Loading drawings...</div>
+                </div>
+            </div>
+
+            <!-- DISCUSSION FORUM TAB -->
+            <div id="forum" class="tab-content">
+                <div class="forum-header">
+                    <h2>💬 Discussion Forum</h2>
+                    <p>Share your thoughts and learn from others about digital safety and smart tech choices!</p>
+                </div>
+
+                <div class="question-prompts">
+                    <h3><span>💭</span> Questions of the Day</h3>
+                    <p>Choose a question to start or join a discussion:</p>
+                    <div class="prompt-buttons">
+                        <button class="prompt-btn" onclick="setTopic('How do we balance our time with technology?')">
+                            <span class="prompt-icon">⏰</span>
+                            How do we balance our time with technology?
+                        </button>
+                        <button class="prompt-btn" onclick="setTopic('How do we stay safe online?')">
+                            <span class="prompt-icon">🔒</span>
+                            How do we stay safe online?
+                        </button>
+                        <button class="prompt-btn" onclick="setTopic('How can we be kind and stand up for others online?')">
+                            <span class="prompt-icon">💝</span>
+                            How can we be kind and stand up for others online?
+                        </button>
+                        <button class="prompt-btn" onclick="setTopic('What footprints are we leaving behind?')">
+                            <span class="prompt-icon">👣</span>
+                            What footprints are we leaving behind?
+                        </button>
+                        <button class="prompt-btn" onclick="setTopic('How can we know if something we see or hear is true?')">
+                            <span class="prompt-icon">✓</span>
+                            How can we know if something we see or hear is true?
+                        </button>
+                    </div>
+                </div>
+
+                <div class="conversation-container">
+                    <input 
+                        type="text" 
+                        class="topic-input" 
+                        id="forumTopic" 
+                        placeholder="Discussion topic (or click a question above)"
+                    />
+                    <textarea 
+                        class="message-input" 
+                        id="forumMessage" 
+                        placeholder="Share your thoughts, experiences, or questions..."
+                    ></textarea>
+                    <button class="submit-btn" onclick="postMessage()">Post Message</button>
+
+                    <div id="forumMessageStatus"></div>
+
+                    <div class="messages" id="messagesList">
+                        <div class="loading">Loading discussions...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentUsername = null;
+        let quizAnswers = {};
+
+        const quizQuestions = [
+            {
+                id: 1,
+                question: "Maisie asks AI to generate a scary image for her to see what it does. The image is scarier than she thought it would be and makes her feel nervous. What should Maisie do?",
+                options: [
+                    "Ignore what she has seen and delete the image.",
+                    "Tell a trusted adult about what happened.",
+                    "Generate another image that is happier."
+                ],
+                correct: 1
+            },
+            {
+                id: 2,
+                question: "Noor is looking for facts about France before she goes on holiday there. Noor asks AI for some information about France, but what it says doesn't match what she has researched so far. What should Noor do?",
+                options: [
+                    "Check the facts with other sources to make sure they are correct.",
+                    "Ask the AI if what it said was correct.",
+                    "Forget about what she saw before and trust the AI."
+                ],
+                correct: 0
+            },
+            {
+                id: 3,
+                question: "Remi forgot to do their homework and only realised in the morning before they were leaving for school. Remi has heard about an AI tool that can answer questions for you and thinks it would be able to do their homework really quickly. What should Remi do?",
+                options: [
+                    "Use the AI to do their homework, no one will know!",
+                    "Use the AI but change a few things to make it slightly different.",
+                    "Do their best with the homework in the time that they have."
+                ],
+                correct: 2
+            },
+            {
+                id: 4,
+                question: "Zac has fallen out with one of his friends and it has been getting him down. He doesn't know what to do so he decides to talk to an AI chatbot about it. The chatbot seems friendly. What should Zac remember?",
+                options: [
+                    "Chatbots are just like people.",
+                    "Chatbots shouldn't be relied on for advice and support.",
+                    "Chatbots give good advice."
+                ],
+                correct: 1
+            },
+            {
+                id: 5,
+                question: "Addie's friend has shared a picture of someone in their class, but it has been edited to look silly using AI. What can Addie do?",
+                options: [
+                    "Generate a silly picture of her friend to show her what it feels like.",
+                    "Laugh along, it's not real.",
+                    "Ask her friend to take it down and tell an adult."
+                ],
+                correct: 2
+            },
+            {
+                id: 6,
+                question: "Fatima is using an AI tool. She is considering what information she can put in, and what she needs to keep private. Which of these does Fatima need to keep private?",
+                options: [
+                    "Her favourite animal.",
+                    "A TV show she likes.",
+                    "Her address."
+                ],
+                correct: 2
+            },
+            {
+                id: 7,
+                question: "Mahir has noticed that there is a new AI feature on a game he uses. It looks really interesting so he wants to try it. What should Mahir do?",
+                options: [
+                    "Ask his parents if it is okay for him to use.",
+                    "Ask his friends to see if they have tried it.",
+                    "Check it out to see if it seems alright."
+                ],
+                correct: 0
+            },
+            {
+                id: 8,
+                question: "How should using AI make you feel?",
+                options: [
+                    "Curious and confused.",
+                    "Excited and unsure.",
+                    "Happy and safe."
+                ],
+                correct: 2
+            }
+        ];
+
+        // Authentication
+        function login() {
+            const username = document.getElementById('usernameInput').value.trim();
+            if (!username) {
+                alert('Please enter your name');
+                return;
+            }
+            currentUsername = username;
+            document.getElementById('authContainer').style.display = 'none';
+            document.getElementById('userInfo').style.display = 'block';
+            document.getElementById('currentUser').textContent = username;
+            
+            loadDrawings();
+            loadMessages();
+        }
+
+        function logout() {
+            currentUsername = null;
+            document.getElementById('authContainer').style.display = 'flex';
+            document.getElementById('userInfo').style.display = 'none';
+            document.getElementById('usernameInput').value = '';
+        }
+
+        // Tab Switching
+        function switchTab(tabName) {
+            const tabs = document.querySelectorAll('.tab');
+            const contents = document.querySelectorAll('.tab-content');
+            
+            tabs.forEach(tab => tab.classList.remove('active'));
+            contents.forEach(content => content.classList.remove('active'));
+            
+            event.target.closest('.tab').classList.add('active');
+            document.getElementById(tabName).classList.add('active');
+
+            if (tabName === 'quiz') {
+                renderQuiz();
+            } else if (tabName === 'drawing') {
+                loadDrawings();
+            } else if (tabName === 'forum') {
+                loadMessages();
+            }
+        }
+
+        // Quiz Functions
+        function renderQuiz() {
+            const container = document.getElementById('quizQuestions');
+            container.innerHTML = '';
+            quizAnswers = {};
+
+            quizQuestions.forEach(q => {
+                const questionDiv = document.createElement('div');
+                questionDiv.className = 'question-card';
+                questionDiv.innerHTML = `
+                    <span class="question-number">Question ${q.id} of ${quizQuestions.length}</span>
+                    <h3>${q.question}</h3>
+                    <div class="options">
+                        ${q.options.map((opt, idx) => `
+                            <div class="option" onclick="selectAnswer(${q.id}, ${idx})" data-question="${q.id}" data-option="${idx}">
+                                ${opt}
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                container.appendChild(questionDiv);
+            });
+        }
+
+        function selectAnswer(questionId, optionIdx) {
+            document.querySelectorAll(`[data-question="${questionId}"]`).forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            
+            event.target.classList.add('selected');
+            quizAnswers[questionId] = optionIdx;
+        }
+
+        async function submitQuiz() {
+            if (!currentUsername) {
+                alert('Please login first!');
+                return;
+            }
+
+            if (Object.keys(quizAnswers).length < quizQuestions.length) {
+                alert('Please answer all questions before submitting!');
+                return;
+            }
+
+            let score = 0;
+            quizQuestions.forEach(q => {
+                if (quizAnswers[q.id] === q.correct) {
+                    score++;
+                }
+            });
+
+            const percentage = Math.round((score / quizQuestions.length) * 100);
+
+            try {
+                const timestamp = Date.now();
+                await window.storage.set(`quiz:${currentUsername}:${timestamp}`, JSON.stringify({
+                    username: currentUsername,
+                    score: score,
+                    total: quizQuestions.length,
+                    percentage: percentage,
+                    date: new Date().toISOString()
+                }), true);
+            } catch (error) {
+                console.error('Error saving quiz score:', error);
+            }
+
+            document.getElementById('quizContainer').style.display = 'none';
+            const resultsDiv = document.getElementById('quizResults');
+            resultsDiv.style.display = 'block';
+            
+            let feedback = '';
+            if (percentage >= 90) {
+                feedback = '🌟 Outstanding! You\'re a digital safety expert!';
+            } else if (percentage >= 70) {
+                feedback = '👍 Great job! You have a solid understanding of AI safety!';
+            } else if (percentage >= 50) {
+                feedback = '📚 Good effort! Review the home page to learn more.';
+            } else {
+                feedback = '💪 Keep learning! Digital safety is important for everyone.';
+            }
+
+            resultsDiv.innerHTML = `
+                <div class="quiz-result">
+                    <h2>🎉 Quiz Complete!</h2>
+                    <div class="score">${score}/${quizQuestions.length}</div>
+                    <p style="font-size: 1.5em; color: #666; margin-bottom: 20px;">${percentage}% Correct</p>
+                    <p style="font-size: 1.3em; color: #667eea; font-weight: 600;">${feedback}</p>
+                    <button class="submit-btn" onclick="retakeQuiz()" style="margin-top: 30px;">Retake Quiz</button>
+                    <button class="submit-btn" onclick="viewLeaderboard()" style="background: #764ba2; margin-top: 15px;">View Leaderboard</button>
+                </div>
+            `;
+        }
+
+        function retakeQuiz() {
+            document.getElementById('quizContainer').style.display = 'block';
+            document.getElementById('quizResults').style.display = 'none';
+            renderQuiz();
+        }
+
+        async function viewLeaderboard() {
+            try {
+                const keys = await window.storage.list('quiz:', true);
+                if (!keys || !keys.keys || keys.keys.length === 0) {
+                    alert('No quiz scores yet!');
+                    return;
+                }
+
+                const scores = [];
+                for (const key of keys.keys) {
+                    try {
+                        const result = await window.storage.get(key, true);
+                        if (result && result.value) {
+                            scores.push(JSON.parse(result.value));
+                        }
+                    } catch (e) {
+                        console.error('Error loading score:', e);
+                    }
+                }
+
+                scores.sort((a, b) => b.percentage - a.percentage);
+                const top10 = scores.slice(0, 10);
+
+                const leaderboardHTML = `
+                    <div class="leaderboard">
+                        <h3>🏆 Top Quiz Scores</h3>
+                        ${top10.map((s, idx) => `
+                            <div class="leaderboard-item">
+                                <div>
+                                    <span class="rank">#${idx + 1}</span>
+                                    <span style="font-weight: 600; font-size: 1.1em;">${s.username}</span>
+                                </div>
+                                <span style="font-weight: 700; font-size: 1.2em; color: #667eea;">${s.percentage}%</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+
+                document.getElementById('quizResults').innerHTML += leaderboardHTML;
+            } catch (error) {
+                console.error('Error loading leaderboard:', error);
+                alert('Unable to load leaderboard at this time.');
+            }
+        }
+
+        // Drawing Competition Functions
+        async function handleDrawingUpload(event) {
+            if (!currentUsername) {
+                alert('Please login first!');
+                return;
+            }
+
+            const file = event.target.files[0];
+            const title = document.getElementById('drawingTitle').value.trim();
+
+            if (!file) return;
+            if (!title) {
+                alert('Please enter a title for your drawing!');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = async function(e) {
+                try {
+                    const drawingData = {
+                        title: title,
+                        artist: currentUsername,
+                        imageData: e.target.result,
+                        date: new Date().toISOString(),
+                        timestamp: Date.now()
+                    };
+
+                    await window.storage.set(`drawing:${currentUsername}:${Date.now()}`, JSON.stringify(drawingData), true);
+                    
+                    document.getElementById('drawingMessage').innerHTML = '<div class="success">✅ Drawing uploaded successfully! Great work!</div>';
+                    document.getElementById('drawingTitle').value = '';
+                    document.getElementById('drawingFile').value = '';
+                    
+                    setTimeout(() => {
+                        document.getElementById('drawingMessage').innerHTML = '';
+                    }, 4000);
+
+                    loadDrawings();
+                } catch (error) {
+                    console.error('Error uploading drawing:', error);
+                    document.getElementById('drawingMessage').innerHTML = '<div class="error">❌ Error uploading drawing. Please try again.</div>';
+                }
+            };
+            reader.readAsDataURL(file);
+        }
+
+        async function loadDrawings() {
+            const gallery = document.getElementById('drawingGallery');
+            gallery.innerHTML = '<div class="loading">Loading drawings...</div>';
+
+            try {
+                const keys = await window.storage.list('drawing:', true);
+                
+                if (!keys || !keys.keys || keys.keys.length === 0) {
+                    gallery.innerHTML = '<p style="text-align: center; color: #666; font-size: 1.2em; padding: 40px;">No drawings submitted yet. Be the first to share your creativity!</p>';
+                    return;
+                }
+
+                const drawings = [];
+                for (const key of keys.keys) {
+                    try {
+                        const result = await window.storage.get(key, true);
+                        if (result && result.value) {
+                            drawings.push(JSON.parse(result.value));
+                        }
+                    } catch (e) {
+                        console.error('Error loading drawing:', e);
+                    }
+                }
+
+                drawings.sort((a, b) => b.timestamp - a.timestamp);
+
+                gallery.innerHTML = drawings.map(drawing => `
+                    <div class="gallery-item">
+                        <img src="${drawing.imageData}" alt="${drawing.title}">
+                        <div class="gallery-item-info">
+                            <h4>${drawing.title}</h4>
+                            <p>🎨 By ${drawing.artist}</p>
+                            <p class="date">📅 ${new Date(drawing.date).toLocaleDateString()}</p>
+                        </div>
+                    </div>
+                `).join('');
+            } catch (error) {
+                console.error('Error loading drawings:', error);
+                gallery.innerHTML = '<div class="error">Unable to load drawings. Please refresh the page.</div>';
+            }
+        }
+
+        // Discussion Forum Functions
+        function setTopic(topic) {
+            document.getElementById('forumTopic').value = topic;
+            document.getElementById('forumMessage').focus();
+        }
+
+        async function postMessage() {
+            if (!currentUsername) {
+                alert('Please login first!');
+                return;
+            }
+
+            const topic = document.getElementById('forumTopic').value.trim();
+            const message = document.getElementById('forumMessage').value.trim();
+
+            if (!topic || !message) {
+                alert('Please enter both a topic and message!');
+                return;
+            }
+
+            try {
+                const messageData = {
+                    topic: topic,
+                    message: message,
+                    author: currentUsername,
+                    date: new Date().toISOString(),
+                    timestamp: Date.now()
+                };
+
+                await window.storage.set(`message:${Date.now()}`, JSON.stringify(messageData), true);
+                
+                document.getElementById('forumMessageStatus').innerHTML = '<div class="success">✅ Message posted successfully!</div>';
+                document.getElementById('forumTopic').value = '';
+                document.getElementById('forumMessage').value = '';
+                
+                setTimeout(() => {
+                    document.getElementById('forumMessageStatus').innerHTML = '';
+                }, 4000);
+
+                loadMessages();
+            } catch (error) {
+                console.error('Error posting message:', error);
+                document.getElementById('forumMessageStatus').innerHTML = '<div class="error">❌ Error posting message. Please try again.</div>';
+            }
+        }
+
+        async function loadMessages() {
+            const messagesList = document.getElementById('messagesList');
+            messagesList.innerHTML = '<div class="loading">Loading discussions...</div>';
+
+            try {
+                const keys = await window.storage.list('message:', true);
+                
+                if (!keys || !keys.keys || keys.keys.length === 0) {
+                    messagesList.innerHTML = '<p style="text-align: center; color: #666; font-size: 1.2em; padding: 40px;">No discussions yet. Start the conversation!</p>';
+                    return;
+                }
+
+                const messages = [];
+                for (const key of keys.keys) {
+                    try {
+                        const result = await window.storage.get(key, true);
+                        if (result && result.value) {
+                            messages.push(JSON.parse(result.value));
+                        }
+                    } catch (e) {
+                        console.error('Error loading message:', e);
+                    }
+                }
+
+                messages.sort((a, b) => b.timestamp - a.timestamp);
+
+                messagesList.innerHTML = messages.map(msg => `
+                    <div class="message">
+                        <div class="message-header">
+                            <span class="message-author">${msg.author}</span>
+                            <span class="message-date">${new Date(msg.date).toLocaleString()}</span>
+                        </div>
+                        <div class="message-topic">${msg.topic}</div>
+                        <div class="message-content">${msg.message}</div>
+                    </div>
+                `).join('');
+            } catch (error) {
+                console.error('Error loading messages:', error);
+                messagesList.innerHTML = '<div class="error">Unable to load discussions. Please refresh the page.</div>';
+            }
+        }
+
+        // Initialize
+        window.addEventListener('load', () => {
+            renderQuiz();
+        });
+    </script>
+</body>
+</html>
