@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Safer Internet Day 2026 - Smart Tech, Safe Choices</title>
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -191,10 +188,7 @@
             position: relative;
         }
 
-        .tab:hover {
-            background: #e9ecef;
-            color: #667eea;
-        }
+        .tab:hover { background: #e9ecef; color: #667eea; }
 
         .tab.active {
             background: white;
@@ -202,26 +196,13 @@
             border-bottom: 4px solid #667eea;
         }
 
-        .tab-icon {
-            font-size: 1.5em;
-            display: block;
-            margin-bottom: 8px;
-        }
+        .tab-icon { font-size: 1.5em; display: block; margin-bottom: 8px; }
 
         /* Content Area */
-        .content {
-            padding: 50px;
-            min-height: 600px;
-        }
+        .content { padding: 50px; min-height: 600px; }
 
-        .tab-content {
-            display: none;
-            animation: fadeIn 0.5s;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
+        .tab-content { display: none; animation: fadeIn 0.5s; }
+        .tab-content.active { display: block; }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
@@ -229,16 +210,9 @@
         }
 
         /* Home Page Styles */
-        .welcome-section {
-            text-align: center;
-            margin-bottom: 50px;
-        }
+        .welcome-section { text-align: center; margin-bottom: 50px; }
 
-        .welcome-section h2 {
-            color: #667eea;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
+        .welcome-section h2 { color: #667eea; font-size: 2.5em; margin-bottom: 20px; }
 
         .welcome-section p {
             font-size: 1.3em;
@@ -277,10 +251,7 @@
             gap: 12px;
         }
 
-        .poster-card ul {
-            list-style: none;
-            margin-top: 20px;
-        }
+        .poster-card ul { list-style: none; margin-top: 20px; }
 
         .poster-card li {
             padding: 15px 0;
@@ -289,9 +260,7 @@
             line-height: 1.5;
         }
 
-        .poster-card li:last-child {
-            border-bottom: none;
-        }
+        .poster-card li:last-child { border-bottom: none; }
 
         .info-box {
             background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
@@ -302,10 +271,7 @@
             box-shadow: 0 10px 30px rgba(78, 205, 196, 0.3);
         }
 
-        .info-box h3 {
-            font-size: 1.8em;
-            margin-bottom: 15px;
-        }
+        .info-box h3 { font-size: 1.8em; margin-bottom: 15px; }
 
         .info-box p {
             font-size: 1.15em;
@@ -314,26 +280,12 @@
         }
 
         /* Quiz Styles */
-        .quiz-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+        .quiz-header { text-align: center; margin-bottom: 40px; }
 
-        .quiz-header h2 {
-            color: #667eea;
-            font-size: 2.5em;
-            margin-bottom: 15px;
-        }
+        .quiz-header h2 { color: #667eea; font-size: 2.5em; margin-bottom: 15px; }
+        .quiz-header p { font-size: 1.2em; color: #666; }
 
-        .quiz-header p {
-            font-size: 1.2em;
-            color: #666;
-        }
-
-        .quiz-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
+        .quiz-container { max-width: 900px; margin: 0 auto; }
 
         .question-card {
             background: #f8f9fa;
@@ -345,16 +297,8 @@
             transition: all 0.3s;
         }
 
-        .question-card:hover {
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-
-        .question-card h3 {
-            color: #333;
-            margin-bottom: 25px;
-            font-size: 1.4em;
-            line-height: 1.6;
-        }
+        .question-card:hover { box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+        .question-card h3 { color: #333; margin-bottom: 25px; font-size: 1.4em; line-height: 1.6; }
 
         .question-number {
             display: inline-block;
@@ -366,11 +310,7 @@
             margin-bottom: 15px;
         }
 
-        .options {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
+        .options { display: flex; flex-direction: column; gap: 15px; }
 
         .option {
             padding: 18px 20px;
@@ -417,11 +357,7 @@
             box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
         }
 
-        .submit-btn:disabled {
-            background: #ccc;
-            cursor: not-allowed;
-            transform: none;
-        }
+        .submit-btn:disabled { background: #ccc; cursor: not-allowed; transform: none; }
 
         .quiz-result {
             text-align: center;
@@ -432,18 +368,9 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        .quiz-result h2 {
-            color: #667eea;
-            font-size: 2.5em;
-            margin-bottom: 25px;
-        }
+        .quiz-result h2 { color: #667eea; font-size: 2.5em; margin-bottom: 25px; }
 
-        .score {
-            font-size: 4em;
-            font-weight: 700;
-            color: #764ba2;
-            margin: 25px 0;
-        }
+        .score { font-size: 4em; font-weight: 700; color: #764ba2; margin: 25px 0; }
 
         .leaderboard {
             background: white;
@@ -453,11 +380,7 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        .leaderboard h3 {
-            color: #667eea;
-            margin-bottom: 20px;
-            font-size: 1.8em;
-        }
+        .leaderboard h3 { color: #667eea; margin-bottom: 20px; font-size: 1.8em; }
 
         .leaderboard-item {
             display: flex;
@@ -469,33 +392,17 @@
             align-items: center;
         }
 
-        .rank {
-            font-weight: 700;
-            color: #764ba2;
-            font-size: 1.2em;
-            min-width: 50px;
-        }
+        .rank { font-weight: 700; color: #764ba2; font-size: 1.2em; min-width: 50px; }
 
         /* Drawing Competition Styles */
-        .competition-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+        .competition-header { text-align: center; margin-bottom: 40px; }
 
-        .competition-header h2 {
-            color: #667eea;
-            font-size: 2.5em;
-            margin-bottom: 15px;
-        }
+        .competition-header h2 { color: #667eea; font-size: 2.5em; margin-bottom: 15px; }
 
-        .competition-header p {
-            font-size: 1.2em;
-            color: #666;
-            line-height: 1.7;
-        }
+        .competition-header p { font-size: 1.2em; color: #666; line-height: 1.7; }
 
         .upload-section {
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto 50px;
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             padding: 40px;
@@ -503,22 +410,78 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        /* Discussion Forum Styles */
-        .forum-header {
+        .upload-section h3 {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 25px;
             text-align: center;
-            margin-bottom: 40px;
         }
 
-        .forum-header h2 {
-            color: #667eea;
-            font-size: 2.5em;
-            margin-bottom: 15px;
+        .drawing-title-input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 3px solid #ddd;
+            border-radius: 12px;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            transition: border-color 0.3s;
         }
 
-        .forum-header p {
-            font-size: 1.2em;
-            color: #666;
+        .drawing-title-input:focus { outline: none; border-color: #667eea; }
+
+        .upload-area {
+            border: 4px dashed #667eea;
+            border-radius: 15px;
+            padding: 50px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: white;
         }
+
+        .upload-area:hover {
+            background: #f0f4ff;
+            border-color: #764ba2;
+            transform: scale(1.02);
+        }
+
+        .upload-area input[type="file"] { display: none; }
+        .upload-icon { font-size: 4em; margin-bottom: 15px; display: block; }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .gallery-item:hover { transform: translateY(-8px); box-shadow: 0 12px 35px rgba(0,0,0,0.2); }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .gallery-item-info { padding: 20px; }
+
+        .gallery-item-info h4 { color: #333; margin-bottom: 8px; font-size: 1.3em; }
+        .gallery-item-info p { color: #666; font-size: 1em; margin-bottom: 5px; }
+        .gallery-item-info .date { font-size: 0.9em; color: #999; }
+
+        /* Discussion Forum Styles */
+        .forum-header { text-align: center; margin-bottom: 40px; }
+
+        .forum-header h2 { color: #667eea; font-size: 2.5em; margin-bottom: 15px; }
+        .forum-header p { font-size: 1.2em; color: #666; }
 
         .question-prompts {
             background: linear-gradient(135deg, #FFE66D 0%, #FFC93C 100%);
@@ -537,16 +500,9 @@
             gap: 12px;
         }
 
-        .question-prompts p {
-            color: #555;
-            margin-bottom: 20px;
-            font-size: 1.1em;
-        }
+        .question-prompts p { color: #555; margin-bottom: 20px; font-size: 1.1em; }
 
-        .prompt-buttons {
-            display: grid;
-            gap: 12px;
-        }
+        .prompt-buttons { display: grid; gap: 12px; }
 
         .prompt-btn {
             background: white;
@@ -570,14 +526,9 @@
             box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
         }
 
-        .prompt-icon {
-            font-size: 1.5em;
-        }
+        .prompt-icon { font-size: 1.5em; }
 
-        .conversation-container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
+        .conversation-container { max-width: 1000px; margin: 0 auto; }
 
         .topic-input {
             width: 100%;
@@ -589,10 +540,7 @@
             transition: border-color 0.3s;
         }
 
-        .topic-input:focus {
-            outline: none;
-            border-color: #667eea;
-        }
+        .topic-input:focus { outline: none; border-color: #667eea; }
 
         .message-input {
             width: 100%;
@@ -607,14 +555,9 @@
             font-family: inherit;
         }
 
-        .message-input:focus {
-            outline: none;
-            border-color: #667eea;
-        }
+        .message-input:focus { outline: none; border-color: #667eea; }
 
-        .messages {
-            margin-top: 40px;
-        }
+        .messages { margin-top: 40px; }
 
         .message {
             background: white;
@@ -626,49 +569,16 @@
             transition: all 0.3s;
         }
 
-        .message:hover {
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-            transform: translateX(5px);
-        }
+        .message:hover { box-shadow: 0 8px 25px rgba(0,0,0,0.15); transform: translateX(5px); }
 
-        .message-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 15px;
-            align-items: center;
-        }
-
-        .message-author {
-            font-weight: 700;
-            color: #667eea;
-            font-size: 1.2em;
-        }
-
-        .message-date {
-            color: #999;
-            font-size: 0.95em;
-        }
-
-        .message-topic {
-            font-size: 1.3em;
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 12px;
-        }
-
-        .message-content {
-            color: #666;
-            line-height: 1.7;
-            font-size: 1.05em;
-        }
+        .message-header { display: flex; justify-content: space-between; margin-bottom: 15px; align-items: center; }
+        .message-author { font-weight: 700; color: #667eea; font-size: 1.2em; }
+        .message-date { color: #999; font-size: 0.95em; }
+        .message-topic { font-size: 1.3em; font-weight: 700; color: #333; margin-bottom: 12px; }
+        .message-content { color: #666; line-height: 1.7; font-size: 1.05em; }
 
         /* Utility Classes */
-        .loading {
-            text-align: center;
-            padding: 40px;
-            color: #666;
-            font-size: 1.2em;
-        }
+        .loading { text-align: center; padding: 40px; color: #666; font-size: 1.2em; }
 
         .error {
             background: #ffe6e6;
@@ -690,34 +600,21 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2em;
-            }
-
-            .header .theme {
-                font-size: 1.3em;
-            }
-
-            .tabs {
-                flex-direction: column;
-            }
-
-            .content {
-                padding: 30px 20px;
-            }
-
-            .poster-grid {
-                grid-template-columns: 1fr;
-            }
+            .header h1 { font-size: 2em; }
+            .header .theme { font-size: 1.3em; }
+            .tabs { flex-direction: column; }
+            .content { padding: 30px 20px; }
+            .poster-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <!-- Header -->
         <div class="header">
             <div class="logo-container">
-                <img src="https://saferinternet.org.uk/wp-content/themes/safer-internet/public/logo.svg" alt="UK Safer Internet Centre">
+                <img src="https://saferinternet.org.uk/wp-content/themes/safer-internet/public/logo.svg" alt="UK Safer Internet Centre" />
             </div>
             <h1>🌐 Safer Internet Day 2026</h1>
             <div class="theme">Smart Tech, Safe Choices</div>
@@ -738,19 +635,19 @@
 
         <!-- Navigation Tabs -->
         <div class="tabs">
-            <button class="tab active" onclick="switchTab('home')">
+            <button class="tab active" onclick="switchTab(event, 'home')">
                 <span class="tab-icon">🏠</span>
                 Home
             </button>
-            <button class="tab" onclick="switchTab('quiz')">
+            <button class="tab" onclick="switchTab(event, 'quiz')">
                 <span class="tab-icon">📝</span>
                 Safety Quiz
             </button>
-            <button class="tab" onclick="switchTab('drawing')">
+            <button class="tab" onclick="switchTab(event, 'drawing')">
                 <span class="tab-icon">🎨</span>
                 Drawing Competition
             </button>
-            <button class="tab" onclick="switchTab('forum')">
+            <button class="tab" onclick="switchTab(event, 'forum')">
                 <span class="tab-icon">💬</span>
                 Discussion Forum
             </button>
@@ -763,8 +660,8 @@
                 <div class="welcome-section">
                     <h2>Welcome to Safer Internet Day 2026!</h2>
                     <p>
-                        Safer Internet Day is a time to celebrate the safe and responsible use of technology 
-                        through channels that are accessible and promote positive spaces for children and young people. 
+                        Safer Internet Day is a time to celebrate the safe and responsible use of technology
+                        through channels that are accessible and promote positive spaces for children and young people.
                         This year's theme is about <strong>making smart choices with AI</strong>.
                     </p>
                 </div>
@@ -810,12 +707,12 @@
                 <div class="info-box">
                     <h3>💡 Why This Matters</h3>
                     <p>
-                        <strong>Safer Internet Day is an opportunity to reflect on the growing use of artificial intelligence (AI).</strong> 
-                        It's crucial that children are safe when they use it. They must be protected from harmful content, and given 
+                        <strong>Safer Internet Day is an opportunity to reflect on the growing use of artificial intelligence (AI).</strong>
+                        It's crucial that children are safe when they use it. They must be protected from harmful content, and given
                         the tools and skills to recognise misinformation generated by AI.
                     </p>
                     <p>
-                        Children and young people should be involved in discussions and developments around AI, to learn how to use 
+                        Children and young people should be involved in discussions and developments around AI, to learn how to use
                         it safely, so they are active participants in what is likely to become an increasing presence in their lives.
                     </p>
                 </div>
@@ -841,62 +738,38 @@
                 <div class="competition-header">
                     <h2>🎨 Digital Safety Drawing Competition</h2>
                     <p>
-                        Create and share your own illustrations about staying safe online! 
-                        Draw a poster showing how to use AI safely, how to stay protected on the internet, 
+                        Create and share your own illustrations about staying safe online!
+                        Draw a poster showing how to use AI safely, how to stay protected on the internet,
                         or how to be a responsible digital citizen.
                     </p>
                 </div>
 
                 <div class="upload-section">
-                    <div style="text-align: center; padding: 40px;">
-                        <div style="margin-bottom: 30px;">
-                            <svg width="120" height="120" viewBox="0 0 120 120" style="display: block; margin: 0 auto 20px;">
-                                <rect x="10" y="10" width="100" height="100" rx="15" fill="#FF6B6B" stroke="#667eea" stroke-width="3"/>
-                                <rect x="20" y="30" width="80" height="60" rx="8" fill="#FFE66D"/>
-                                <circle cx="40" cy="50" r="8" fill="#667eea"/>
-                                <path d="M 30 75 Q 45 65, 60 75 T 90 75" stroke="#667eea" stroke-width="3" fill="none" stroke-linecap="round"/>
-                                <rect x="15" y="15" width="90" height="90" rx="12" fill="none" stroke="white" stroke-width="2" opacity="0.5"/>
-                            </svg>
-                            <p style="font-size: 1.5em; color: #667eea; font-weight: 700; margin-bottom: 10px;">
-                                📌 Padlet
-                            </p>
-                        </div>
-                        
-                        <h3 style="color: #333; font-size: 1.8em; margin-bottom: 20px;">
-                            Share Your Drawing on Padlet
-                        </h3>
-                        
-                        <p style="color: #666; font-size: 1.15em; line-height: 1.7; margin-bottom: 35px; max-width: 600px; margin-left: auto; margin-right: auto;">
-                            Click the button below to visit our Padlet board where you can upload your digital safety drawings, 
-                            view other students' artwork, and leave comments!
+                    <h3>📤 Upload Your Drawing</h3>
+                    <input type="text" class="drawing-title-input" id="drawingTitle"
+                           placeholder="Give your drawing a title (e.g., 'Smart Choices with AI')" />
+                    <div class="upload-area" onclick="document.getElementById('drawingFile').click()">
+                        <input type="file" id="drawingFile" accept="image/*" onchange="handleDrawingUpload(event)" />
+                        <span class="upload-icon">🎨</span>
+                        <p style="font-size: 1.3em; color: #667eea; margin-bottom: 10px; font-weight: 600;">
+                            Click to Upload Your Drawing
                         </p>
-                        
-                        <a href="https://padlet.com/nirupamswati/safer-internet-day-2026-si0qqmmshak3gs2x" 
-                           target="_blank" 
-                           style="display: inline-flex; align-items: center; gap: 12px; background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%); color: white; padding: 20px 45px; border-radius: 15px; text-decoration: none; font-weight: 700; font-size: 1.3em; transition: all 0.3s; box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);"
-                           onmouseover="this.style.transform='translateY(-5px) scale(1.05)'; this.style.boxShadow='0 12px 35px rgba(255, 107, 107, 0.5)'"
-                           onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 25px rgba(255, 107, 107, 0.4)'">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
-                                <rect x="3" y="3" width="18" height="18" rx="2" stroke="white" stroke-width="2" fill="none"/>
-                                <line x1="3" y1="9" x2="21" y2="9" stroke="white" stroke-width="2"/>
-                                <line x1="9" y1="3" x2="9" y2="21" stroke="white" stroke-width="2"/>
-                            </svg>
-                            Open Padlet - Upload Your Drawing
-                        </a>
-                        
-                        <div style="margin-top: 35px; padding: 25px; background: #f0f4ff; border-radius: 12px; max-width: 700px; margin-left: auto; margin-right: auto;">
-                            <p style="color: #555; font-size: 1.05em; line-height: 1.6; margin-bottom: 10px;">
-                                <strong>💡 Drawing Ideas:</strong>
-                            </p>
-                            <ul style="color: #666; text-align: left; max-width: 500px; margin: 0 auto; line-height: 1.8;">
-                                <li>How to use AI safely and responsibly</li>
-                                <li>Tips for staying safe online</li>
-                                <li>Being kind to others on the internet</li>
-                                <li>Recognizing fake news and misinformation</li>
-                                <li>Digital footprints and privacy</li>
-                            </ul>
-                        </div>
+                        <p style="color: #666; font-size: 1.05em;">
+                            Choose an image of your drawing (JPG, PNG, or GIF)
+                        </p>
+                        <p style="color:#999; font-size:0.95em; margin-top:10px;">
+                            Note: drawings are saved on this device only.
+                        </p>
                     </div>
+                </div>
+
+                <div id="drawingMessage"></div>
+
+                <h3 style="color: #667eea; font-size: 2em; margin-bottom: 30px; text-align: center;">
+                    🖼️ Student Drawing Gallery
+                </h3>
+                <div class="gallery" id="drawingGallery">
+                    <div class="loading">Loading drawings...</div>
                 </div>
             </div>
 
@@ -935,17 +808,10 @@
                 </div>
 
                 <div class="conversation-container">
-                    <input 
-                        type="text" 
-                        class="topic-input" 
-                        id="forumTopic" 
-                        placeholder="Discussion topic (or click a question above)"
-                    />
-                    <textarea 
-                        class="message-input" 
-                        id="forumMessage" 
-                        placeholder="Share your thoughts, experiences, or questions..."
-                    ></textarea>
+                    <input type="text" class="topic-input" id="forumTopic"
+                           placeholder="Discussion topic (or click a question above)" />
+                    <textarea class="message-input" id="forumMessage"
+                              placeholder="Share your thoughts, experiences, or questions..."></textarea>
                     <button class="submit-btn" onclick="postMessage()">Post Message</button>
 
                     <div id="forumMessageStatus"></div>
@@ -955,12 +821,34 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 
+    <!-- ✅ READY-TO-USE FIXED SCRIPT (localStorage) -->
     <script>
         let currentUsername = null;
         let quizAnswers = {};
+
+        // =========================
+        // ✅ LocalStorage helpers
+        // =========================
+        function lsSet(key, value) {
+            localStorage.setItem(key, value);
+        }
+
+        function lsGet(key) {
+            return localStorage.getItem(key); // string | null
+        }
+
+        function lsList(prefix) {
+            const keys = [];
+            for (let i = 0; i < localStorage.length; i++) {
+                const k = localStorage.key(i);
+                if (k && k.startsWith(prefix)) keys.push(k);
+            }
+            return keys;
+        }
 
         const quizQuestions = [
             {
@@ -1045,7 +933,9 @@
             }
         ];
 
+        // =========================
         // Authentication
+        // =========================
         function login() {
             const username = document.getElementById('usernameInput').value.trim();
             if (!username) {
@@ -1056,7 +946,8 @@
             document.getElementById('authContainer').style.display = 'none';
             document.getElementById('userInfo').style.display = 'block';
             document.getElementById('currentUser').textContent = username;
-            
+
+            loadDrawings();
             loadMessages();
         }
 
@@ -1067,26 +958,32 @@
             document.getElementById('usernameInput').value = '';
         }
 
-        // Tab Switching
-        function switchTab(tabName) {
+        // =========================
+        // Tab Switching (fixed)
+        // =========================
+        function switchTab(e, tabName) {
             const tabs = document.querySelectorAll('.tab');
             const contents = document.querySelectorAll('.tab-content');
-            
+
             tabs.forEach(tab => tab.classList.remove('active'));
             contents.forEach(content => content.classList.remove('active'));
-            
-            event.target.closest('.tab').classList.add('active');
+
+            // Use the clicked button
+            e.currentTarget.classList.add('active');
             document.getElementById(tabName).classList.add('active');
 
             if (tabName === 'quiz') {
                 renderQuiz();
+            } else if (tabName === 'drawing') {
+                loadDrawings();
             } else if (tabName === 'forum') {
                 loadMessages();
             }
-            // Drawing tab now just shows Padlet link - no loading needed
         }
 
-        // Quiz Functions
+        // =========================
+        // Quiz Functions (fixed)
+        // =========================
         function renderQuiz() {
             const container = document.getElementById('quizQuestions');
             container.innerHTML = '';
@@ -1100,7 +997,7 @@
                     <h3>${q.question}</h3>
                     <div class="options">
                         ${q.options.map((opt, idx) => `
-                            <div class="option" onclick="selectAnswer(${q.id}, ${idx})" data-question="${q.id}" data-option="${idx}">
+                            <div class="option" onclick="selectAnswer(event, ${q.id}, ${idx})" data-question="${q.id}" data-option="${idx}">
                                 ${opt}
                             </div>
                         `).join('')}
@@ -1110,16 +1007,16 @@
             });
         }
 
-        function selectAnswer(questionId, optionIdx) {
+        function selectAnswer(e, questionId, optionIdx) {
             document.querySelectorAll(`[data-question="${questionId}"]`).forEach(opt => {
                 opt.classList.remove('selected');
             });
-            
-            event.target.classList.add('selected');
+
+            e.currentTarget.classList.add('selected');
             quizAnswers[questionId] = optionIdx;
         }
 
-        async function submitQuiz() {
+        function submitQuiz() {
             if (!currentUsername) {
                 alert('Please login first!');
                 return;
@@ -1132,40 +1029,30 @@
 
             let score = 0;
             quizQuestions.forEach(q => {
-                if (quizAnswers[q.id] === q.correct) {
-                    score++;
-                }
+                if (quizAnswers[q.id] === q.correct) score++;
             });
 
             const percentage = Math.round((score / quizQuestions.length) * 100);
 
-            try {
-                const timestamp = Date.now();
-                await window.storage.set(`quiz:${currentUsername}:${timestamp}`, JSON.stringify({
-                    username: currentUsername,
-                    score: score,
-                    total: quizQuestions.length,
-                    percentage: percentage,
-                    date: new Date().toISOString()
-                }), true);
-            } catch (error) {
-                console.error('Error saving quiz score:', error);
-            }
+            // Save score to localStorage
+            const timestamp = Date.now();
+            lsSet(`quiz:${currentUsername}:${timestamp}`, JSON.stringify({
+                username: currentUsername,
+                score,
+                total: quizQuestions.length,
+                percentage,
+                date: new Date().toISOString()
+            }));
 
             document.getElementById('quizContainer').style.display = 'none';
             const resultsDiv = document.getElementById('quizResults');
             resultsDiv.style.display = 'block';
-            
+
             let feedback = '';
-            if (percentage >= 90) {
-                feedback = '🌟 Outstanding! You\'re a digital safety expert!';
-            } else if (percentage >= 70) {
-                feedback = '👍 Great job! You have a solid understanding of AI safety!';
-            } else if (percentage >= 50) {
-                feedback = '📚 Good effort! Review the home page to learn more.';
-            } else {
-                feedback = '💪 Keep learning! Digital safety is important for everyone.';
-            }
+            if (percentage >= 90) feedback = "🌟 Outstanding! You're a digital safety expert!";
+            else if (percentage >= 70) feedback = "👍 Great job! You have a solid understanding of AI safety!";
+            else if (percentage >= 50) feedback = "📚 Good effort! Review the home page to learn more.";
+            else feedback = "💪 Keep learning! Digital safety is important for everyone.";
 
             resultsDiv.innerHTML = `
                 <div class="quiz-result">
@@ -1185,69 +1072,146 @@
             renderQuiz();
         }
 
-        async function viewLeaderboard() {
+        function viewLeaderboard() {
+            const keys = lsList('quiz:');
+            if (keys.length === 0) {
+                alert('No quiz scores yet!');
+                return;
+            }
+
+            const scores = [];
+            for (const key of keys) {
+                const value = lsGet(key);
+                if (value) {
+                    try { scores.push(JSON.parse(value)); } catch (_) {}
+                }
+            }
+
+            scores.sort((a, b) => (b.percentage ?? 0) - (a.percentage ?? 0));
+            const top10 = scores.slice(0, 10);
+
+            const leaderboardHTML = `
+                <div class="leaderboard">
+                    <h3>🏆 Top Quiz Scores</h3>
+                    ${top10.map((s, idx) => `
+                        <div class="leaderboard-item">
+                            <div>
+                                <span class="rank">#${idx + 1}</span>
+                                <span style="font-weight: 600; font-size: 1.1em;">${escapeHtml(s.username || 'Unknown')}</span>
+                            </div>
+                            <span style="font-weight: 700; font-size: 1.2em; color: #667eea;">${s.percentage ?? 0}%</span>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+
+            // Append (or replace) leaderboard once
+            const resultsDiv = document.getElementById('quizResults');
+            const existing = resultsDiv.querySelector('.leaderboard');
+            if (existing) existing.remove();
+            resultsDiv.insertAdjacentHTML('beforeend', leaderboardHTML);
+        }
+
+        // =========================
+        // Drawing Competition (fixed)
+        // =========================
+        function handleDrawingUpload(event) {
+            if (!currentUsername) {
+                alert('Please login first!');
+                return;
+            }
+
+            const file = event.target.files[0];
+            const title = document.getElementById('drawingTitle').value.trim();
+
+            if (!file) return;
+            if (!title) {
+                alert('Please enter a title for your drawing!');
+                return;
+            }
+
+            // ⚠️ localStorage has limited space (often ~5MB). Large photos may fail.
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                try {
+                    const drawingData = {
+                        title,
+                        artist: currentUsername,
+                        imageData: e.target.result,
+                        date: new Date().toISOString(),
+                        timestamp: Date.now()
+                    };
+
+                    lsSet(`drawing:${currentUsername}:${Date.now()}`, JSON.stringify(drawingData));
+
+                    document.getElementById('drawingMessage').innerHTML =
+                        '<div class="success">✅ Drawing uploaded successfully! Great work!</div>';
+
+                    document.getElementById('drawingTitle').value = '';
+                    document.getElementById('drawingFile').value = '';
+
+                    setTimeout(() => {
+                        document.getElementById('drawingMessage').innerHTML = '';
+                    }, 4000);
+
+                    loadDrawings();
+                } catch (error) {
+                    console.error('Error uploading drawing:', error);
+                    document.getElementById('drawingMessage').innerHTML =
+                        '<div class="error">❌ Error uploading drawing. The image might be too large for this device storage. Try a smaller file.</div>';
+                }
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function loadDrawings() {
+            const gallery = document.getElementById('drawingGallery');
+            gallery.innerHTML = '<div class="loading">Loading drawings...</div>';
+
             try {
-                const keys = await window.storage.list('quiz:', true);
-                if (!keys || !keys.keys || keys.keys.length === 0) {
-                    alert('No quiz scores yet!');
+                const keys = lsList('drawing:');
+
+                if (keys.length === 0) {
+                    gallery.innerHTML =
+                        '<p style="text-align: center; color: #666; font-size: 1.2em; padding: 40px;">No drawings submitted yet. Be the first to share your creativity!</p>';
                     return;
                 }
 
-                const scores = [];
-                for (const key of keys.keys) {
-                    try {
-                        const result = await window.storage.get(key, true);
-                        if (result && result.value) {
-                            scores.push(JSON.parse(result.value));
-                        }
-                    } catch (e) {
-                        console.error('Error loading score:', e);
+                const drawings = [];
+                for (const key of keys) {
+                    const value = lsGet(key);
+                    if (value) {
+                        try { drawings.push(JSON.parse(value)); } catch (_) {}
                     }
                 }
 
-                scores.sort((a, b) => b.percentage - a.percentage);
-                const top10 = scores.slice(0, 10);
+                drawings.sort((a, b) => (b.timestamp ?? 0) - (a.timestamp ?? 0));
 
-                const leaderboardHTML = `
-                    <div class="leaderboard">
-                        <h3>🏆 Top Quiz Scores</h3>
-                        ${top10.map((s, idx) => `
-                            <div class="leaderboard-item">
-                                <div>
-                                    <span class="rank">#${idx + 1}</span>
-                                    <span style="font-weight: 600; font-size: 1.1em;">${s.username}</span>
-                                </div>
-                                <span style="font-weight: 700; font-size: 1.2em; color: #667eea;">${s.percentage}%</span>
-                            </div>
-                        `).join('')}
+                gallery.innerHTML = drawings.map(drawing => `
+                    <div class="gallery-item">
+                        <img src="${drawing.imageData}" alt="${escapeHtml(drawing.title)}">
+                        <div class="gallery-item-info">
+                            <h4>${escapeHtml(drawing.title)}</h4>
+                            <p>🎨 By ${escapeHtml(drawing.artist)}</p>
+                            <p class="date">📅 ${new Date(drawing.date).toLocaleDateString()}</p>
+                        </div>
                     </div>
-                `;
-
-                document.getElementById('quizResults').innerHTML += leaderboardHTML;
+                `).join('');
             } catch (error) {
-                console.error('Error loading leaderboard:', error);
-                alert('Unable to load leaderboard at this time.');
+                console.error('Error loading drawings:', error);
+                gallery.innerHTML = '<div class="error">Unable to load drawings. Please refresh the page.</div>';
             }
         }
 
-        // Drawing Competition Functions - Redirects to Padlet
-        async function handleDrawingUpload(event) {
-            // No longer used - drawings are uploaded to Padlet
-            console.log('Drawings are now uploaded to Padlet');
-        }
-
-        async function loadDrawings() {
-            // No longer used - drawings are on Padlet
-            console.log('Drawings are displayed on Padlet');
-        }
-
-        // Discussion Forum Functions
+        // =========================
+        // Discussion Forum (fixed)
+        // =========================
         function setTopic(topic) {
             document.getElementById('forumTopic').value = topic;
             document.getElementById('forumMessage').focus();
         }
 
-        async function postMessage() {
+        function postMessage() {
             if (!currentUsername) {
                 alert('Please login first!');
                 return;
@@ -1261,96 +1225,84 @@
                 return;
             }
 
-            // Show loading state
-            document.getElementById('forumMessageStatus').innerHTML = '<div class="success">Posting your message...</div>';
-
             try {
                 const messageData = {
-                    topic: topic,
-                    message: message,
+                    topic,
+                    message,
                     author: currentUsername,
                     date: new Date().toISOString(),
                     timestamp: Date.now()
                 };
 
-                const messageKey = `message:${currentUsername}:${Date.now()}`;
-                console.log('Attempting to save message with key:', messageKey);
-                
-                const saveResult = await window.storage.set(messageKey, JSON.stringify(messageData), true);
-                console.log('Save result:', saveResult);
-                
-                if (saveResult) {
-                    document.getElementById('forumMessageStatus').innerHTML = '<div class="success">✅ Message posted successfully!</div>';
-                    document.getElementById('forumTopic').value = '';
-                    document.getElementById('forumMessage').value = '';
-                    
-                    setTimeout(() => {
-                        document.getElementById('forumMessageStatus').innerHTML = '';
-                    }, 4000);
+                lsSet(`message:${Date.now()}`, JSON.stringify(messageData));
 
-                    // Reload messages to show the new post
-                    await loadMessages();
-                } else {
-                    throw new Error('Storage operation returned null');
-                }
-            } catch (error) {
-                console.error('Error posting message:', error);
-                document.getElementById('forumMessageStatus').innerHTML = '<div class="error">❌ Error posting message: ' + error.message + '. Please try again.</div>';
-                
+                document.getElementById('forumMessageStatus').innerHTML =
+                    '<div class="success">✅ Message posted successfully!</div>';
+
+                document.getElementById('forumTopic').value = '';
+                document.getElementById('forumMessage').value = '';
+
                 setTimeout(() => {
                     document.getElementById('forumMessageStatus').innerHTML = '';
-                }, 6000);
+                }, 4000);
+
+                loadMessages();
+            } catch (error) {
+                console.error('Error posting message:', error);
+                document.getElementById('forumMessageStatus').innerHTML =
+                    '<div class="error">❌ Error posting message. Please try again.</div>';
             }
         }
 
-        async function loadMessages() {
+        function loadMessages() {
             const messagesList = document.getElementById('messagesList');
             messagesList.innerHTML = '<div class="loading">Loading discussions...</div>';
 
             try {
-                const keys = await window.storage.list('message:', true);
-                console.log('Found message keys:', keys);
-                
-                if (!keys || !keys.keys || keys.keys.length === 0) {
-                    messagesList.innerHTML = '<p style="text-align: center; color: #666; font-size: 1.2em; padding: 40px;">No discussions yet. Start the conversation!</p>';
+                const keys = lsList('message:');
+
+                if (keys.length === 0) {
+                    messagesList.innerHTML =
+                        '<p style="text-align: center; color: #666; font-size: 1.2em; padding: 40px;">No discussions yet. Start the conversation!</p>';
                     return;
                 }
 
                 const messages = [];
-                for (const key of keys.keys) {
-                    try {
-                        const result = await window.storage.get(key, true);
-                        if (result && result.value) {
-                            const parsedMessage = JSON.parse(result.value);
-                            console.log('Loaded message:', parsedMessage);
-                            messages.push(parsedMessage);
-                        }
-                    } catch (e) {
-                        console.error('Error loading message:', e);
+                for (const key of keys) {
+                    const value = lsGet(key);
+                    if (value) {
+                        try { messages.push(JSON.parse(value)); } catch (_) {}
                     }
                 }
 
-                if (messages.length === 0) {
-                    messagesList.innerHTML = '<p style="text-align: center; color: #666; font-size: 1.2em; padding: 40px;">No discussions yet. Start the conversation!</p>';
-                    return;
-                }
-
-                messages.sort((a, b) => b.timestamp - a.timestamp);
+                messages.sort((a, b) => (b.timestamp ?? 0) - (a.timestamp ?? 0));
 
                 messagesList.innerHTML = messages.map(msg => `
                     <div class="message">
                         <div class="message-header">
-                            <span class="message-author">${msg.author}</span>
+                            <span class="message-author">${escapeHtml(msg.author)}</span>
                             <span class="message-date">${new Date(msg.date).toLocaleString()}</span>
                         </div>
-                        <div class="message-topic">${msg.topic}</div>
-                        <div class="message-content">${msg.message}</div>
+                        <div class="message-topic">${escapeHtml(msg.topic)}</div>
+                        <div class="message-content">${escapeHtml(msg.message).replace(/\n/g, "<br>")}</div>
                     </div>
                 `).join('');
             } catch (error) {
                 console.error('Error loading messages:', error);
-                messagesList.innerHTML = '<div class="error">Unable to load discussions. Please refresh the page. Error: ' + error.message + '</div>';
+                messagesList.innerHTML = '<div class="error">Unable to load discussions. Please refresh the page.</div>';
             }
+        }
+
+        // =========================
+        // Small safety helper
+        // =========================
+        function escapeHtml(str) {
+            return String(str ?? '')
+                .replaceAll('&', '&amp;')
+                .replaceAll('<', '&lt;')
+                .replaceAll('>', '&gt;')
+                .replaceAll('"', '&quot;')
+                .replaceAll("'", '&#039;');
         }
 
         // Initialize
